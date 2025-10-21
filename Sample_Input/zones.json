@@ -1,0 +1,110 @@
+{
+  "zones": [
+    {
+      "zonename": "global",
+      "zonekeys": {
+        "type": "Email",
+        "version": 1
+      },
+      "zonearray": [],
+      "zonedelete": false
+    },
+    {
+      "zonename": "input",
+      "zonekeys": {
+        "input": "{\"jobpayload\":{\"jobid\":134117,\"jobtypecode\":352,\"jobtypecodeversion\":1,\"jobflags\":{},\"jobprofile\":{\"datatoprocess\":{\"logpath\":\"01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/log\",\"rulepath\":null,\"txtfiles\":null,\"errorpath\":\"01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/error\",\"htmlfiles\":null,\"shorttext\":null,\"inputfiles\":[\"01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/input/contracts/Cleaning-Services-Contract.pdf\"],\"sourcefile\":null,\"accountpath\":\"/opt/omniscien/account/\",\"logfilepath\":\"/opt/omniscien/account/01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/log/134117.log\",\"outputfiles\":null,\"sourcefiles\":null,\"uploadfiles\":2,\"workingpath\":\"01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/work\",\"documenttype\":null,\"htmlfilepath\":null,\"metadatapath\":\"01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/metadatapath\",\"textfilepath\":null,\"candidatefile\":null,\"inputfilepath\":\"/opt/omniscien/account/01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/input/contracts/Cleaning-Services-Contract.pdf\",\"referencefile\":null,\"candidatefiles\":null,\"filesonstorage\":null,\"outputfilepath\":null,\"referencefiles\":null},\"outputoptions\":{\"datafiles\":{\"pdf\":0,\"xml\":0,\"docx\":1}},\"processingoptions\":{\"debug\":{\"logdetail\":0,\"emaillogto\":\"\",\"logjobsteps\":1},\"flowid\":551,\"userid\":96,\"flowguid\":\"0f445747-9b1b-4d7f-9218-195b4d7cf2a2\",\"flowname\":\"Demo Contract Summary\",\"accountid\":1001,\"batchname\":null,\"projectid\":183,\"variables\":{\"chkOutputMD\":{\"type\":\"boolean\",\"value\":0},\"chkOutputPDF\":{\"type\":\"boolean\",\"value\":1},\"chkOutputXML\":{\"type\":\"boolean\",\"value\":0},\"chkOutputHTML\":{\"type\":\"boolean\",\"value\":0},\"chkOutputJSON\":{\"type\":\"boolean\",\"value\":1},\"chkOutputPlainText\":{\"type\":\"boolean\",\"val..."
+      },
+      "zonearray": [],
+      "zonedelete": false
+    },
+    {
+      "zonename": "out_of_industry_norm",
+      "zonekeys": {
+        "out_of_industry_point": "MD: - The contract commencement and termination dates are the same, effectively making it a zero-duration contract. This is out of the industry norm because typically contracts have a specified duration.\n- The Time is of the Essence clause may imply a stricter timing requirement than typical for cleaning services. This is out of the industry norm because cleaning services usually have more flexible timing requirements.\n- The Alcohol and Drugs clause is unusually strict as it terminates the agreement immediately upon the presence or possession of alcohol or drugs without requiring the individual to be under the influence or that it impacts their work. This is out of the industry norm because typically such clauses require impairment or impact on work performance.\n- The date format ('5th of September, 2024') used in the signature blocks is unconventional. This is out of the industry norm because the typical numerical date format (e.g., 09/05/2024) is more commonly used."
+      },
+      "zonearray": [],
+      "zonedelete": false
+    },
+    {
+      "zonename": "contract_parties",
+      "zonekeys": {
+        "item_count": 2
+      },
+      "zonearray": [
+        {
+          "party_name": "Jane Doe",
+          "party_short_name": "Client",
+          "party_address": "456 Oak Avenue, Springfield, IL 62704",
+          "party_role": "Client"
+        },
+        {
+          "party_name": "Sparkling Cleaners LLC",
+          "party_short_name": "Cleaner",
+          "party_address": "123 Pine Street, Springfield, IL 62704",
+          "party_role": "Independent Contractor"
+        }
+      ],
+      "zonedelete": false
+    },
+    {
+      "zonename": "contract_payment",
+      "zonekeys": {
+        "payment_amount": "$100 Per Cleaning",
+        "payment_schedule": "Weekly",
+        "payment_method": "Bank Transfer",
+        "late_payment": "Failure to return property may result in a delay in any final payment. The defaulted Party shall reimburse the non-defaulting Party or Parties for all costs and expenses reasonably incurred by the non-defaulting Party or Parties in connection with the default, including without limitation, attorney’s fees. Additionally, the contract outlines reimbursement for costs and expenses in the event of default as per Section XV."
+      },
+      "zonearray": [],
+      "zonedelete": false
+    },
+    {
+      "zonename": "contract_obligations",
+      "zonekeys": {
+        "item_count": 1
+      },
+      "zonearray": [
+        {
+          "party_table": "MD: <div style=\"font-family: Arial; font-size: 10px;\">\n<table style=\"width: 100%; border-collapse: collapse;\"><tr>\n<td style=\"vertical-align: top; width: 50%; border-right: 1px solid #000; padding-right: 8px;\"><div style=\"text-align: center; font-weight: normal;\">Party A</div>\n<ul style=\"font-family: Arial; font-size: 10px; margin: 0; padding-left: 20px;\">\n<li style=\"font-family: Arial; font-size: 13px;\">Will commence duties on the agreed Commencement Date</li>\n<li style=\"font-family: Arial; font-size: 13px;\">Will perform Cleaner's Duties as outlined in the contract</li>\n<li style=\"font-family: Arial; font-size: 13px;\">Will make Payment Amount of the agreed sum</li>\n<li style=\"font-family: Arial; font-size: 13px;\">Will use the specified Payment Method</li>\n<li style=\"font-family: Arial; font-size: 13px;\">Will allow Inspection of Duties by the other party</li>\n<li style=\"font-family: Arial; font-size: 13px;\">Will return Property in good condition</li>\n<li style=\"font-family: Arial; font-size: 13px;\">Will adhere to Time is of the Essence clause</li>\n<li style=\"font-family: Arial; font-size: 13px;\">Will maintain Confidentiality as required</li>\n<li style=\"font-family: Arial; font-size: 13px;\">Will pay Taxes as applicable</li>\n<li style=\"font-family: Arial; font-size: 13px;\">Will operate as an Independent Contractor</li>\n<li style=\"font-family: Arial; font-size: 13px;\">Will ensure Safety protocols are followed</li>\n<li style=\"font-family: Arial; font-size: 13px;\">Will prohibit Alcohol and Drugs on the premises</li>\n<li style=\"font-family: Arial; font-size: 13px;\">Will notify Successors and Assigns of contract terms</li>\n<li style=\"font-family: Arial; font-size: 13px;\">Will not waive Default without written notice</li>\n<li style=\"font-family: Arial; font-size: 13px;\">Will comply with Governing Law</li>\n</ul></td>\n<td style=\"vertical-align: top; width: 50%; padding: 8px;\"><div style=\"text-align: center; font-weight: normal;\">Party B</div>\n<ul style=\"font-family: Arial; fo..."
+        }
+      ],
+      "zonedelete": false
+    },
+    {
+      "zonename": "contract_legal",
+      "zonekeys": {
+        "confidentiality": "The Cleaner agrees not to disclose the Client's Confidential Information, including financial and accounting records, client lists, and other business data, except with the Client's prior written consent or as required to advance the Client's business. The Cleaner must return all documents containing Confidential Information to the Client upon termination or request. The Client is entitled to an injunction if the Cleaner breaches the confidentiality agreement, as monetary damages would be an inadequate remedy.",
+        "intellectual_property": "Not mentioned in Contract.",
+        "warranties": "Not mentioned in Contract.",
+        "liabilities": "The Client and Cleaner shall be liable for their respective obligations under this Agreement. The Cleaner agrees to indemnify and hold harmless the Client from any loss or damage resulting from a violation of the independent contractor status provision. The Cleaner shall be solely responsible and liable for any penalties, fines, or fees incurred related to safety and OSHA regulations. The Cleaner is also responsible for all withholdings and taxes.",
+        "indemnities": "The Cleaner shall indemnify and hold harmless the Client from any loss or damage resulting from a violation of the independent contractor status provision. In the event of default, the defaulted Party shall reimburse the non-defaulting Party for all costs and expenses reasonably incurred, including attorney's fees.",
+        "governing_law": "This Agreement shall be governed by and shall be construed in accordance with the laws in the State of Illinois.",
+        "other_terms": "The Cleaner must correct any defective or incomplete work within a reasonable time if notified by the Client. The Cleaner must return all property provided by the Client upon termination. Time is of the essence in performing duties. The Agreement shall be binding upon and inure to the benefit of heirs, personal representatives, successors, and assigns of the Parties. The presence of alcohol and drugs is prohibited while performing duties. Any waiver of a provision must be executed in writing. In the event of default, the defaulted Party shall reimburse the non-defaulting Party for costs and expenses, including attorney's fees. The prevailing Party in a suit or action shall be reimbursed by the other Party for costs and expenses, including reasonable attorney's fees. The Agreement constitutes the entire agreement between the Parties and supersedes all prior agreements. No supplement, modification, or amendment of this Agreement shall be binding unless executed in writing by all Parties. The Parties acknowledge executing this Agreement voluntarily and without duress or undue influence, have read and understood the terms, and have sought legal advice if desired. The Agreement also includes a severability clause, where if any term is held invalid, the remainder of the provisions shall remain in full force and effect."
+      },
+      "zonearray": [],
+      "zonedelete": false
+    },
+    {
+      "zonename": "contract_description",
+      "zonekeys": {
+        "description": "The contract is for cleaning services between Jane Doe and Sparkling Cleaners LLC, outlining terms and obligations for $100 per cleaning with weekly payments.",
+        "contract_type": "Service Agreement",
+        "contract_title": "Cleaning Services Contract"
+      },
+      "zonearray": [],
+      "zonedelete": false
+    },
+    {
+      "zonename": "contract_date",
+      "zonekeys": {
+        "contract_start_date": "05 Sep 2024",
+        "contract_end_date": "05 Sep 2024",
+        "contract_signed_date": "05 Sep 2024",
+        "contract_term": "The term of this Agreement shall commence on 05 Sep 2024 and terminate on the date of 05 Sep 2024",
+        "contract_duration": "1 day",
+        "contract_termination": "Breach or termination of Agreement"
+      },
+      "zonearray": [],
+      "zonedelete": false
+    }
+  ]
+}

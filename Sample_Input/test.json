@@ -1,0 +1,56 @@
+{
+  "zones": [
+    {
+      "zonename": "global",
+      "zonekeys": {
+        "type": "Email",
+        "version": 1
+      },
+      "zonearray": [],
+      "zonedelete": false
+    },
+    {
+      "zonename": "global_intro",
+      "zonekeys": {
+        "section": "introduction"
+      },
+      "zonearray": [],
+      "zonedelete": false
+    },
+    {
+      "zonename": "contract_obligations",
+      "zonekeys": {
+        "section": "terms",
+        "priority": 2
+      },
+      "zonearray": [],
+      "zonedelete": true
+    },
+    {
+      "zonename": "global_confidentiality",
+      "zonekeys": {
+        "section": "legal"
+      },
+      "zonearray": [],
+      "zonedelete": false
+    },
+    {
+      "zonename": "termination",
+      "zonekeys": {
+        "section": "closure",
+        "notice_days": 30
+      },
+      "zonearray": [],
+      "zonedelete": true
+    },
+    {
+      "zonename": "signatures",
+      "zonekeys": {
+        "section": "footer",
+        "requires_date": true
+      },
+      "zonearray": [],
+      "zonedelete": false
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+Document Title: Contract Template
+
+<ls_intro>
+[[type]]: ver.[[version]]
+This contract is made between Party A and Party B. 
+</ls_intro>
+
+<ls_contract_obligations>
+Party A agrees to provide service X.
+Party B agrees to pay Y amount.
+</ls_contract_obligations>
+
+<ls_confidentiality>
+All information shared is confidential.
+</ls_confidentiality>
+
+<ls_termination>
+Either party may terminate with 30 days notice.
+</ls_termination>
+
+<ls_signatures>
+Signed by both parties on the effective date.
+</ls_signatures>

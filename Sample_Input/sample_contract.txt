@@ -1,0 +1,51 @@
+[[type]]: ver.[[version]]
+This contract is made between Party A and Party B. 
+
+<ls_input>
+[[input]]
+</ls_input>
+
+<ls_out_of_industry_norm>
+[[out_of_industry_point]]
+</ls_out_of_industry_norm>
+
+<ls_contract_parties>
+Party Role: [[party_role]]
+Party: [[party_name]] - [[party_short_name]]
+Address: [[party_address]]
+</ls_contract_parties>
+
+<ls_contract_payment>
+Payment Amount: [[payment_amount]]
+At: [[payment_schedule]] By: [[payment_method]]
+Late: [[late_payment]]
+</ls_contract_payment>
+
+<ls_contract_obligations>
+- [[party_table]]
+</ls_contract_obligations>
+
+<ls_contract_legal>
+[[confidentiality]]
+[[intellectual_property]]
+[[warranties]]
+[[liabilities]]
+[[indemnities]]
+[[governing_law]]
+[[other_terms]]
+</ls_contract_legal>
+
+<ls_contract_description>
+[[description]]
+[[contract_type]]
+[[contract_title]]
+</ls_contract_description>
+
+<ls_contract_date>
+[[contract_start_date]]
+[[contract_end_date]]
+[[contract_signed_date]]
+[[contract_term]]
+[[contract_duration]]
+[[contract_termination]]
+</ls_contract_date>
