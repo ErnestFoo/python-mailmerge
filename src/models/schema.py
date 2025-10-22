@@ -11,8 +11,15 @@ class Zone(BaseModel):
     zone_arrays: list[ZoneArray] = Field(default_factory=list, alias='zonearray')
     zone_delete: bool = Field(default=False, alias='zonedelete')
 
+    
 
     
 class ZoneCollection(BaseModel): 
     """Top level collection of zones."""
     zones: list[Zone]
+    
+    def get_zone_by_name(self, name: str) -> Union[Zone, None]:
+        for zone in self.zones:
+            if zone.zone_name == name:
+                return zone
+        return None

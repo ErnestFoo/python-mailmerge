@@ -47,7 +47,6 @@ class TextMailMerge(BaseMailMerge):
     def save_output_from_buffer(self, output_path: str):
         """ Function to save the output of the mail merge operations """
         self.output_file_handler.save_file(output_path, self._temp_buffer)
-        pass
     
     def validate_inputs(self):
         """ Function to validate the loaded template and input data for mail merge operations. """
@@ -57,22 +56,6 @@ class TextMailMerge(BaseMailMerge):
             raise ValueError("Template file has not been loaded.")
         return True
 
-    def perform_merge(self):
-        """ Function to run all mail merge operations on the Zone Collection.
-         This includes deleting zones, replacing global zones, and replacing non-global zones.
-         - First deletes zones tagged with zonedelete=true
-         - Then replace global zones 
-         - Finally replace non-global zones
-        """
-        self.validate_inputs()
-        self.delete_zones()
-
-        self.replace_global()
-        self.replace_zones()
-        
-        print(self._temp_buffer)
-        pass
-
     def delete_zones(self):
         """Function to delete zones in the template marked with specific tags."""
         #Uses Grep to pattern match the content within zone tags and remove them
@@ -81,14 +64,12 @@ class TextMailMerge(BaseMailMerge):
         content = self._temp_buffer
         
         for zone in zones_to_delete:
-            start_tag = f"<{TAG}{zone.zone_name}>"
-            end_tag = f"</{TAG}{zone.zone_name}>"
+            start_tag, end_tag = self.__get_start_end_tags(zone.zone_name)
             print(f"Removing content between tags: {start_tag} and {end_tag}")
             
             # Using Regex to remove content between start and end tags
-            
             pattern = re.compile(
-                r"\s" + re.escape(start_tag) + r".*?" + re.escape(end_tag) + r"(?:\r?\n)?",
+                r"(?:\r?\n)?" + r"\s" + re.escape(start_tag) + r".*?" + re.escape(end_tag) + r"(?:\r?\n)?",
                 flags=re.DOTALL
             )
             content, count = re.subn(pattern, "", content)
@@ -99,22 +80,16 @@ class TextMailMerge(BaseMailMerge):
             
     def replace_global(self):
         """Function to replace global zones in the template."""
-        content = self._temp_buffer
-
-        global_zones = [zone for zone in self.zone_collection.zones 
-                        if zone.zone_name.upper() == GLOBAL_TAG.upper()]
-        print(f"Global zones to replace: {[zone.zone_name for zone in global_zones]}")
+        global_zone = self.zone_collection.get_zone_by_name(GLOBAL_TAG)
+        print(f"Global zone to replace: {global_zone.zone_name}")
         
-        # # For each global zone, 
-        # global_zone_keys = {key: value for zone in global_zones 
-        #                     for key, value in zone.zone_keys.items()}
-        # print(f"Global zone keys for replacement: {global_zone_keys}")
-        
-        self.__base_replace(zone=global_zones)
+        self.__base_replace(zone=global_zone)
     
     def replace_zones(self):
         """Function to replace non-global zones in the template."""
-        zones_to_replace = [zone for zone in self.zone_collection.zones if zone.zone_name != GLOBAL_TAG]
+        zones_to_replace = [zone for zone in 
+                            self.zone_collection.zones 
+                            if zone.zone_name != GLOBAL_TAG]
         for zone in zones_to_replace:
             self.__base_replace(zone=zone)
     
@@ -138,29 +113,24 @@ class TextMailMerge(BaseMailMerge):
         # For global zones, replace all [[key]] with value in the whole content
         if (zone.zone_name.upper() == GLOBAL_TAG.upper()):
             for key, value in zone.zone_keys.items():
-                tag = f"[[{key}]]"
-                print(f"Replacing global tag {tag} with value: {value}")
-
-                if not isinstance(value, str):
-                    value = str(value)
-
-                content = content.replace(tag, value)
+                #If value is not string, convert to string
+                if not isinstance(value, str): value = str(value)
+                content = content.replace(f"[[{key}]]", value)
                 
         # For non-global zones, replace within the zone tags only
         else:
-            # Get zoned regions of text to replace
-            start_tag = f"<{TAG}{zone.zone_name}>"
-            end_tag = f"</{TAG}{zone.zone_name}>"
-            pattern = rf"({re.escape(start_tag)})(.*?)(\s*{re.escape(end_tag)})"
-            
-            # Function to perform replacement for each match
+            # Function to prepare replacement within the zone tags
             def replace_in_zone(match: re.Match) -> str:
                 zone_body = match.group(2)
                 for key, value in zone.zone_keys.items():
                     placeholder = f"[[{key}]]"
                     zone_body = zone_body.replace(placeholder, str(value))
                 return f"{match.group(1)}{zone_body}{match.group(3)}"
-
+            
+            # Get zoned regions of text to replace
+            start_tag , end_tag = self.__get_start_end_tags(zone.zone_name)
+            pattern = r"(?:\r?\n)?" + rf"({re.escape(start_tag)})(.*?)({re.escape(end_tag)})" + r"(?:\r?\n)?"
+            
             # Replace ALL matches of this zone in the template
             content = re.sub(pattern, replace_in_zone, content, flags=re.DOTALL)
 
@@ -175,9 +145,46 @@ class TextMailMerge(BaseMailMerge):
 
     def __list_replace(self, zone:dict):
         """Function to replace list zones in the template.
+        Build list of items from zone arrays and replace in the template.
         
+        Find all regions of the zones in the template that match the zone name.
+        
+        Get the string between the zone tags, and for each item in the zone array,
         """
-        pass
+        start_tag, end_tag = self.__get_start_end_tags(zone.zone_name)
+        template_regions = self.__get_string_region(self._temp_buffer, start_tag, end_tag)
+        
+        for region in template_regions:
+            merged_items = ""
+            for array_item in zone.zone_arrays:
+                item_content = region
+                for key, value in array_item.root.items():
+                    pattern = r"(?:\r?\n)?" + r"\[\[" + re.escape(key) + r"\]\]" + r"(?:\r?\n)?"
+                    item_content = re.sub(pattern, str(value), item_content)
+                
+                # If not last item, add a newline for separation
+                if array_item != zone.zone_arrays[-1]: item_content += "\n"
+                merged_items += item_content
+            
+            # Replace the whole region including tags with merged items
+            pattern = r"(?:\r?\n)?" + re.escape(start_tag) + re.escape(region) + re.escape(end_tag) + r"(?:\r?\n)?"
+            content = re.sub(pattern, merged_items, self._temp_buffer, flags=re.DOTALL)
+             
+            self._temp_buffer 
+            print(f"Replaced list zone {zone.zone_name} with {len(zone.zone_arrays)} items.")
+
+    def __get_start_end_tags(self, zone_name: str) -> tuple[str, str]:
+        """Function to get start and end tags for a given zone name."""
+        start_tag = f"<{TAG}{zone_name}>"
+        end_tag = f"</{TAG}{zone_name}>"
+        return start_tag, end_tag
+    
+    def __get_string_region(self, content: str, start_tag: str, end_tag: str) -> list[str]:
+        """Function to get all string regions between start and end tags."""
+        pattern = rf"({re.escape(start_tag)})(.*?)({re.escape(end_tag)})"
+        matches = re.findall(pattern, content, flags=re.DOTALL)
+        regions = [match[1] for match in matches]
+        return regions
 
     
 if __name__ == "__main__":

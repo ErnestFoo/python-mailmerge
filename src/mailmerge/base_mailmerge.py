@@ -30,12 +30,18 @@ class BaseMailMerge(ABC):
         """ Function to validate the loaded template and input data for mail merge operations. """
         pass
         
-    @abstractmethod
     def perform_merge(self):
         """ Function to run all mail merge operations on the Zone Collection.
-         This includes deleting zones, replacing global zones, and replacing non-global zones."""
-        pass
-    
+         This includes deleting zones, replacing global zones, and replacing non-global zones.
+         - First deletes zones tagged with zonedelete=true
+         - Then replace global zones 
+         - Finally replace non-global zones
+        """
+        self.validate_inputs()
+        self.delete_zones()
+        self.replace_global()
+        self.replace_zones()
+
     @abstractmethod
     def delete_zones(self, template_path: str):
         """Function to delete zones in the template marked with specific tags."""

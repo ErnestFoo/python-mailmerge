@@ -1,51 +1,115 @@
-[[type]]: ver.[[version]]
-This contract is made between Party A and Party B. 
+<ls_contract_summary>
+[[type]] — Version [[version]]
 
+====================================================================
+1. CONTRACT OVERVIEW
+====================================================================
+<ls_contract_description>
+Title: [[contract_title]]
+Type: [[contract_type]]
+Description: [[description]]
+</ls_contract_description>
+
+<ls_contract_date>
+Effective Dates:
+- Commencement Date: [[contract_start_date]]
+- End Date: [[contract_end_date]]
+- Signed Date: [[contract_signed_date]]
+- Duration: [[contract_duration]]
+- Term / Validity: [[contract_term]]
+- Termination Condition: [[contract_termination]]
+
+
+====================================================================
+2. INPUT DETAILS
+====================================================================
 <ls_input>
 [[input]]
 </ls_input>
 
+====================================================================
+3. OUT OF INDUSTRY NORMS
+====================================================================
 <ls_out_of_industry_norm>
 [[out_of_industry_point]]
 </ls_out_of_industry_norm>
 
+====================================================================
+4. CONTRACT PARTIES
+====================================================================
 <ls_contract_parties>
 Party Role: [[party_role]]
-Party: [[party_name]] - [[party_short_name]]
+Party: [[party_name]] (Short name: [[party_short_name]])
 Address: [[party_address]]
 </ls_contract_parties>
 
+====================================================================
+5. PAYMENT DETAILS
+====================================================================
 <ls_contract_payment>
 Payment Amount: [[payment_amount]]
-At: [[payment_schedule]] By: [[payment_method]]
-Late: [[late_payment]]
+Payment Schedule: [[payment_schedule]]
+Payment Method: [[payment_method]]
+Late Payment Terms: [[late_payment]]
 </ls_contract_payment>
 
+====================================================================
+6. OBLIGATIONS OF THE PARTIES
+====================================================================
 <ls_contract_obligations>
-- [[party_table]]
+[[party_table]]
 </ls_contract_obligations>
 
+====================================================================
+7. LEGAL TERMS AND CONDITIONS
+====================================================================
 <ls_contract_legal>
+Confidentiality:
 [[confidentiality]]
+
+Intellectual Property:
 [[intellectual_property]]
+
+Warranties:
 [[warranties]]
+
+Liabilities:
 [[liabilities]]
+
+Indemnities:
 [[indemnities]]
+
+Governing Law:
 [[governing_law]]
+
+Other Terms:
 [[other_terms]]
 </ls_contract_legal>
 
+====================================================================
+8. CONTRACT META INFORMATION
+====================================================================
 <ls_contract_description>
-[[description]]
-[[contract_type]]
-[[contract_title]]
+Summary Description: [[description]]
+Contract Type: [[contract_type]]
+Contract Title: [[contract_title]]
 </ls_contract_description>
 
-<ls_contract_date>
-[[contract_start_date]]
-[[contract_end_date]]
-[[contract_signed_date]]
-[[contract_term]]
-[[contract_duration]]
-[[contract_termination]]
+====================================================================
+9. SIGNATURE DETAILS
+====================================================================
+Signed on: [[contract_signed_date]]
+Contract Duration: [[contract_duration]]
+Termination Clause: [[contract_termination]]
+
+====================================================================
+10. STRUCTURED DATA ZONES (REFERENCE)
+====================================================================
+- <ls_contract_date> ... </ls_contract_date>
+- <ls_contract_payment> ... </ls_contract_payment>
+- <ls_contract_obligations> ... </ls_contract_obligations>
+- <ls_contract_legal> ... </ls_contract_legal>
+- <ls_contract_parties> ... </ls_contract_parties>
+- <ls_contract_description> ... </ls_contract_description>
+</ls_contract_summary>
 </ls_contract_date>
