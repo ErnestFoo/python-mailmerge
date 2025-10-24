@@ -64,17 +64,16 @@ mailmerge.save_output_from_buffer("output.md") #Save the output from the mailmer
 ## Project structure
 The current project tree (excluding metadata):
 
-src
-├── mailmerge
-│   ├── base_mailmerge.py           Abstract base class for Mailmerge implementations
-│   └── text_mailmerge.py           Text (.txt) based implementation of Mailmerge
-├── models
-│   └── schema.py                   Pydantic model declarations for input JSON
-└── utils
-     ├── file_handler.py             Loading, reading and writing files (uses .read())
-     ├── get_input.py                Safe opening and path/file validation helpers
-     ├── zones_processor.py          Validation and casting into the Zones Pydantic model
-     └── str_replace_engine.py       Core reusable regex engine for mailmerge
+| Path | Description |
+|------|--------------|
+| **src/mailmerge/base_mailmerge.py** | Abstract base class for Mailmerge implementations |
+| **src/mailmerge/text_mailmerge.py** | Text (.txt) based implementation of Mailmerge |
+| **src/models/schema.py** | Pydantic model declarations for input JSON |
+| **src/utils/file_handler.py** | Loading, reading, and writing files (uses `.read()`) |
+| **src/utils/get_input.py** | Safe opening and path/file validation helpers |
+| **src/utils/zones_processor.py** | Validation and casting into the Zones Pydantic model |
+| **src/utils/str_replace_engine.py** | Core reusable regex engine for mailmerge |
+
 
 ## File summaries
 - src/mailmerge/base_mailmerge.py  
