@@ -1,4 +1,5 @@
-# Code to open a JSON file and return the data as a dictionary
+# Set of methods to extract and validate input JSON files
+
 import json
 import pathlib
 

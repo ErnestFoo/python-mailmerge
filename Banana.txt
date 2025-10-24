@@ -1,4 +1,4 @@
-<ls_contract_summary>
+
 Email — Version 1
 
 ====================================================================
@@ -16,7 +16,6 @@ Effective Dates:
 - Term / Validity: The term of this Agreement shall commence on 05 Sep 2024 and terminate on the date of 05 Sep 2024
 - Termination Condition: Breach or termination of Agreement
 
-
 ====================================================================
 2. INPUT DETAILS
 ====================================================================
@@ -33,11 +32,14 @@ MD: - The contract commencement and termination dates are the same, effectively 
 ====================================================================
 4. CONTRACT PARTIES
 ====================================================================
-<ls_contract_parties>
-Party Role: [[party_role]]
-Party: [[party_name]] (Short name: [[party_short_name]])
-Address: [[party_address]]
-</ls_contract_parties>
+Party Role: Client
+Party: Jane Doe (Short name: Client)
+Address: 456 Oak Avenue, Springfield, IL 62704
+
+
+Party Role: Independent Contractor
+Party: Sparkling Cleaners LLC (Short name: Cleaner)
+Address: 123 Pine Street, Springfield, IL 62704
 
 ====================================================================
 5. PAYMENT DETAILS
@@ -45,14 +47,34 @@ Address: [[party_address]]
 Payment Amount: $100 Per Cleaning
 Payment Schedule: Weekly
 Payment Method: Bank Transfer
+
 Late Payment Terms: Failure to return property may result in a delay in any final payment. The defaulted Party shall reimburse the non-defaulting Party or Parties for all costs and expenses reasonably incurred by the non-defaulting Party or Parties in connection with the default, including without limitation, attorney’s fees. Additionally, the contract outlines reimbursement for costs and expenses in the event of default as per Section XV.
 
 ====================================================================
 6. OBLIGATIONS OF THE PARTIES
 ====================================================================
-<ls_contract_obligations>
-[[party_table]]
-</ls_contract_obligations>
+MD: <div style="font-family: Arial; font-size: 10px;">
+<table style="width: 100%; border-collapse: collapse;"><tr>
+<td style="vertical-align: top; width: 50%; border-right: 1px solid #000; padding-right: 8px;"><div style="text-align: center; font-weight: normal;">Party A</div>
+<ul style="font-family: Arial; font-size: 10px; margin: 0; padding-left: 20px;">
+<li style="font-family: Arial; font-size: 13px;">Will commence duties on the agreed Commencement Date</li>
+<li style="font-family: Arial; font-size: 13px;">Will perform Cleaner's Duties as outlined in the contract</li>
+<li style="font-family: Arial; font-size: 13px;">Will make Payment Amount of the agreed sum</li>
+<li style="font-family: Arial; font-size: 13px;">Will use the specified Payment Method</li>
+<li style="font-family: Arial; font-size: 13px;">Will allow Inspection of Duties by the other party</li>
+<li style="font-family: Arial; font-size: 13px;">Will return Property in good condition</li>
+<li style="font-family: Arial; font-size: 13px;">Will adhere to Time is of the Essence clause</li>
+<li style="font-family: Arial; font-size: 13px;">Will maintain Confidentiality as required</li>
+<li style="font-family: Arial; font-size: 13px;">Will pay Taxes as applicable</li>
+<li style="font-family: Arial; font-size: 13px;">Will operate as an Independent Contractor</li>
+<li style="font-family: Arial; font-size: 13px;">Will ensure Safety protocols are followed</li>
+<li style="font-family: Arial; font-size: 13px;">Will prohibit Alcohol and Drugs on the premises</li>
+<li style="font-family: Arial; font-size: 13px;">Will notify Successors and Assigns of contract terms</li>
+<li style="font-family: Arial; font-size: 13px;">Will not waive Default without written notice</li>
+<li style="font-family: Arial; font-size: 13px;">Will comply with Governing Law</li>
+</ul></td>
+<td style="vertical-align: top; width: 50%; padding: 8px;"><div style="text-align: center; font-weight: normal;">Party B</div>
+<ul style="font-family: Arial; fo...
 
 ====================================================================
 7. LEGAL TERMS AND CONDITIONS
@@ -73,7 +95,7 @@ Indemnities:
 The Cleaner shall indemnify and hold harmless the Client from any loss or damage resulting from a violation of the independent contractor status provision. In the event of default, the defaulted Party shall reimburse the non-defaulting Party for all costs and expenses reasonably incurred, including attorney's fees.
 
 Governing Law:
-This Agreement shall be governed by and shall be construed in accordance with the laws in the State of Illinois.
+This Agreement shall be governed by and shall be consfalsed in accordance with the laws in the State of Illinois.
 
 Other Terms:
 The Cleaner must correct any defective or incomplete work within a reasonable time if notified by the Client. The Cleaner must return all property provided by the Client upon termination. Time is of the essence in performing duties. The Agreement shall be binding upon and inure to the benefit of heirs, personal representatives, successors, and assigns of the Parties. The presence of alcohol and drugs is prohibited while performing duties. Any waiver of a provision must be executed in writing. In the event of default, the defaulted Party shall reimburse the non-defaulting Party for costs and expenses, including attorney's fees. The prevailing Party in a suit or action shall be reimbursed by the other Party for costs and expenses, including reasonable attorney's fees. The Agreement constitutes the entire agreement between the Parties and supersedes all prior agreements. No supplement, modification, or amendment of this Agreement shall be binding unless executed in writing by all Parties. The Parties acknowledge executing this Agreement voluntarily and without duress or undue influence, have read and understood the terms, and have sought legal advice if desired. The Agreement also includes a severability clause, where if any term is held invalid, the remainder of the provisions shall remain in full force and effect.
@@ -92,9 +114,3 @@ Signed on: 05 Sep 2024
 Contract Duration: 1 day
 Termination Clause: Breach or termination of Agreement
 
-====================================================================
-10. STRUCTURED DATA ZONES (REFERENCE)
-====================================================================
--  ... -  ... - <ls_contract_obligations> ... </ls_contract_obligations>
--  ... - <ls_contract_parties> ... </ls_contract_parties>
--  ... </ls_contract_summary>

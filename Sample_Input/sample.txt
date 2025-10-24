@@ -1,23 +1,105 @@
-Document Title: Contract Template
+<ls_contract_summary>
+[[type]] — Version [[version]]
 
-<ls_intro>
-[[type]]: ver.[[version]]
-This contract is made between Party A and Party B. 
-</ls_intro>
+====================================================================
+1. CONTRACT OVERVIEW
+====================================================================
+<ls_contract_description>
+Title: [[contract_title]]
+Type: [[contract_type]]
+Description: [[description]]
+</ls_contract_description>
 
+<ls_contract_date>
+Effective Dates:
+- Commencement Date: [[contract_start_date]]
+- End Date: [[contract_end_date]]
+- Signed Date: [[contract_signed_date]]
+- Duration: [[contract_duration]]
+- Term / Validity: [[contract_term]]
+- Termination Condition: [[contract_termination]]
+
+====================================================================
+2. INPUT DETAILS
+====================================================================
+<ls_input>
+[[input]]
+</ls_input>
+
+====================================================================
+3. OUT OF INDUSTRY NORMS
+====================================================================
+<ls_out_of_industry_norm>
+[[out_of_industry_point]]
+</ls_out_of_industry_norm>
+
+====================================================================
+4. CONTRACT PARTIES
+====================================================================
+<ls_contract_parties>
+Party Role: [[party_role]]
+Party: [[party_name]] (Short name: [[party_short_name]])
+Address: [[party_address]]
+</ls_contract_parties>
+
+====================================================================
+5. PAYMENT DETAILS
+====================================================================
+<ls_contract_payment>
+Payment Amount: [[payment_amount]]
+Payment Schedule: [[payment_schedule]]
+Payment Method: [[payment_method]]
+Late Payment Terms: [[late_payment]]
+</ls_contract_payment>
+
+====================================================================
+6. OBLIGATIONS OF THE PARTIES
+====================================================================
 <ls_contract_obligations>
-Party A agrees to provide service X.
-Party B agrees to pay Y amount.
+[[party_table]]
 </ls_contract_obligations>
 
-<ls_confidentiality>
-All information shared is confidential.
-</ls_confidentiality>
+====================================================================
+7. LEGAL TERMS AND CONDITIONS
+====================================================================
+<ls_contract_legal>
+Confidentiality:
+[[confidentiality]]
 
-<ls_termination>
-Either party may terminate with 30 days notice.
-</ls_termination>
+Intellectual Property:
+[[intellectual_property]]
 
-<ls_signatures>
-Signed by both parties on the effective date.
-</ls_signatures>
+Warranties:
+[[warranties]]
+
+Liabilities:
+[[liabilities]]
+
+Indemnities:
+[[indemnities]]
+
+Governing Law:
+[[governing_law]]
+
+Other Terms:
+[[other_terms]]
+</ls_contract_legal>
+
+====================================================================
+8. CONTRACT META INFORMATION
+====================================================================
+<ls_contract_description>
+Summary Description: [[description]]
+Contract Type: [[contract_type]]
+Contract Title: [[contract_title]]
+</ls_contract_description>
+
+====================================================================
+9. SIGNATURE DETAILS
+====================================================================
+Signed on: [[contract_signed_date]]
+Contract Duration: [[contract_duration]]
+Termination Clause: [[contract_termination]]
+
+</ls_contract_date>
+</ls_contract_summary>

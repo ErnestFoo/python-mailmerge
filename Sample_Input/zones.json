@@ -77,7 +77,7 @@
         "warranties": "Not mentioned in Contract.",
         "liabilities": "The Client and Cleaner shall be liable for their respective obligations under this Agreement. The Cleaner agrees to indemnify and hold harmless the Client from any loss or damage resulting from a violation of the independent contractor status provision. The Cleaner shall be solely responsible and liable for any penalties, fines, or fees incurred related to safety and OSHA regulations. The Cleaner is also responsible for all withholdings and taxes.",
         "indemnities": "The Cleaner shall indemnify and hold harmless the Client from any loss or damage resulting from a violation of the independent contractor status provision. In the event of default, the defaulted Party shall reimburse the non-defaulting Party for all costs and expenses reasonably incurred, including attorney's fees.",
-        "governing_law": "This Agreement shall be governed by and shall be construed in accordance with the laws in the State of Illinois.",
+        "governing_law": "This Agreement shall be governed by and shall be consfalsed in accordance with the laws in the State of Illinois.",
         "other_terms": "The Cleaner must correct any defective or incomplete work within a reasonable time if notified by the Client. The Cleaner must return all property provided by the Client upon termination. Time is of the essence in performing duties. The Agreement shall be binding upon and inure to the benefit of heirs, personal representatives, successors, and assigns of the Parties. The presence of alcohol and drugs is prohibited while performing duties. Any waiver of a provision must be executed in writing. In the event of default, the defaulted Party shall reimburse the non-defaulting Party for costs and expenses, including attorney's fees. The prevailing Party in a suit or action shall be reimbursed by the other Party for costs and expenses, including reasonable attorney's fees. The Agreement constitutes the entire agreement between the Parties and supersedes all prior agreements. No supplement, modification, or amendment of this Agreement shall be binding unless executed in writing by all Parties. The Parties acknowledge executing this Agreement voluntarily and without duress or undue influence, have read and understood the terms, and have sought legal advice if desired. The Agreement also includes a severability clause, where if any term is held invalid, the remainder of the provisions shall remain in full force and effect."
       },
       "zonearray": [],
@@ -103,6 +103,12 @@
         "contract_duration": "1 day",
         "contract_termination": "Breach or termination of Agreement"
       },
+      "zonearray": [],
+      "zonedelete": false
+    },
+    {
+      "zonename": "contract_summary",
+      "zonekeys": {},
       "zonearray": [],
       "zonedelete": false
     }

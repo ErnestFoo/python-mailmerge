@@ -1,1 +1,104 @@
-![Sample image](data:image/png;base64,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)
+# Text-Based Mailmerge
+
+A lightweight, text-based implementation of the company's Mailmerge (VIA) API pattern. This project focuses on processing text-like templates (plain text, Markdown, XML) by reading the entire document as a raw string, running the mailmerge replacement engine, and exporting the result in the requested format.
+
+## Table of Contents
+- Summary
+- Features
+- Supported formats
+- Quick start
+- Example usage
+- Project structure
+- File summaries
+- Limitations & notes
+
+## Summary
+This repository provides a reusable, regex-driven mailmerge engine intended for simple text-based templates. It validates and casts input data to Pydantic models, applies zone-based replacements, and writes the resulting file in the chosen format.
+
+## Features
+- Simple, text-first mailmerge implementation
+- Reusable regex replacement engine
+- Pydantic models for input validation and casting
+- Utilities for safe file handling and input validation
+- Supports text, Markdown, and XML templates
+
+## Supported formats
+- .txt (plain text)
+- .md (Markdown)
+- .xml (text-based XML)
+Note: Binary formats or templates requiring non-text parsing are outside the current scope.
+
+## Quick start
+1. Clone the repository:
+    git clone /path/to/repo
+2. (Optional) Create a virtual environment and install dependencies (example):
+    python -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements.txt
+3. Use the provided classes and utilities to perform a mailmerge.
+    Example use may be found in main.py
+
+## Example usage (concept)
+This example shows typical imports and flow; adapt to your CLI or application entrypoint.
+
+```python
+from utils.zones_processor import ZonesProcessor
+from src.utils.get_input import extract_input_json
+from src.mailmerge.text_mailmerge import TextMailMerge
+
+mailmerge = TextMailMerge()
+template_path ="/home/user/example/template/path/template.txt" #The Template to merge into
+input_path = "/home/user/example/input/path/input.json" #The inputs to merge into the template
+
+json_data = extract_input_json(input) #Helper method to safely extract JSON data (with validation)
+
+
+mailmerge.load_input_data(json_data) #Loads the JSON Data 
+mailmerge.load_template_from_path(template) #Loads the template (from path)
+
+mailmerge.perform_merge() # Core merge entry point
+
+mailmerge.save_output_from_buffer("output.md") #Save the output from the mailmerge class
+```
+
+## Project structure
+The current project tree (excluding metadata):
+
+src
+├── mailmerge
+│   ├── base_mailmerge.py           Abstract base class for Mailmerge implementations
+│   └── text_mailmerge.py           Text (.txt) based implementation of Mailmerge
+├── models
+│   └── schema.py                   Pydantic model declarations for input JSON
+└── utils
+     ├── file_handler.py             Loading, reading and writing files (uses .read())
+     ├── get_input.py                Safe opening and path/file validation helpers
+     ├── zones_processor.py          Validation and casting into the Zones Pydantic model
+     └── str_replace_engine.py       Core reusable regex engine for mailmerge
+
+## File summaries
+- src/mailmerge/base_mailmerge.py  
+  Defines the abstract API (methods and behavior) the concrete mailmerge classes implement.
+
+- src/mailmerge/text_mailmerge.py  
+  Concrete implementation that takes a raw text block and applies the replacement engine.
+
+- src/models/schema.py  
+  Pydantic models and schemas used to validate and type the incoming JSON describing zones/values.
+
+- src/utils/file_handler.py  
+  Helpers to open, read and write files. Note: uses .read() and may be sensitive to non-standard encodings.
+
+- src/utils/get_input.py  
+  Functions to validate file paths and safely open files for processing.
+
+- src/utils/zones_processor.py  
+  Pre-processes and validates the JSON input then casts it into Pydantic models.
+
+- src/utils/str_replace_engine.py  
+  Central regex-driven engine that performs replacements in a safe reusable way.
+
+## Limitations & notes
+- The implementation is text-first: binary files, images, or format-specific parsing are out of scope.
+- file_handler.py reads files using .read() — be explicit about encodings to avoid issues with non-UTF-8 sources.
+- Raw-string manipulation is the primary, tested, and recommended path in this project; other approaches will need additional tests.

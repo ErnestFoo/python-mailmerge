@@ -7,7 +7,7 @@
         "version": 1
       },
       "zonearray": [],
-      "zonedelete": false
+      "zonedelete": true
     },
     {
       "zonename": "global_intro",
@@ -15,7 +15,7 @@
         "section": "introduction"
       },
       "zonearray": [],
-      "zonedelete": false
+      "zonedelete": true
     },
     {
       "zonename": "contract_obligations",
@@ -32,7 +32,7 @@
         "section": "legal"
       },
       "zonearray": [],
-      "zonedelete": false
+      "zonedelete": true
     },
     {
       "zonename": "termination",
@@ -50,7 +50,7 @@
         "requires_date": true
       },
       "zonearray": [],
-      "zonedelete": false
+      "zonedelete": true
     }
   ]
 }

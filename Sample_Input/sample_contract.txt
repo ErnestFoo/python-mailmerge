@@ -1,5 +1,6 @@
 <ls_contract_summary>
 [[type]] — Version [[version]]
+</ls_contract_summary>
 
 ====================================================================
 1. CONTRACT OVERVIEW
@@ -18,7 +19,6 @@ Effective Dates:
 - Duration: [[contract_duration]]
 - Term / Validity: [[contract_term]]
 - Termination Condition: [[contract_termination]]
-
 
 ====================================================================
 2. INPUT DETAILS
@@ -50,6 +50,7 @@ Address: [[party_address]]
 Payment Amount: [[payment_amount]]
 Payment Schedule: [[payment_schedule]]
 Payment Method: [[payment_method]]
+
 Late Payment Terms: [[late_payment]]
 </ls_contract_payment>
 
@@ -102,14 +103,4 @@ Signed on: [[contract_signed_date]]
 Contract Duration: [[contract_duration]]
 Termination Clause: [[contract_termination]]
 
-====================================================================
-10. STRUCTURED DATA ZONES (REFERENCE)
-====================================================================
-- <ls_contract_date> ... </ls_contract_date>
-- <ls_contract_payment> ... </ls_contract_payment>
-- <ls_contract_obligations> ... </ls_contract_obligations>
-- <ls_contract_legal> ... </ls_contract_legal>
-- <ls_contract_parties> ... </ls_contract_parties>
-- <ls_contract_description> ... </ls_contract_description>
-</ls_contract_summary>
 </ls_contract_date>
