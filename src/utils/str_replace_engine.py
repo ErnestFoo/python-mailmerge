@@ -123,7 +123,7 @@ class StrReplaceEngine:
         self.preceeding_seq = ""
         self.tag_prefix = ""
         self.start_tag = ""
-        self.body = "(.*?)"
+        self.body = ".*?"  # Default body matches any content lazily
         self.end_tag = ""
         self.proceeding_seq = ""
         return self
@@ -139,7 +139,7 @@ class StrReplaceEngine:
         # self.strip_surrounding_newlines()
         self.set_start_end_tags(start_tag=tag, end_tag=tag)
         self.set_tag_prefix(tag_prefix)
-        self.set_body("(.*?)")
+        self.set_body(".*?")
         return self
 
     def with_default_row_pattern(

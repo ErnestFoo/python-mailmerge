@@ -1,8 +1,6 @@
 <ls_contract_summary>
 Email — Version 1
-
-Email — Version 1
-
+</ls_contract_summary>
 
 ====================================================================
 1. CONTRACT OVERVIEW
@@ -11,11 +9,7 @@ Email — Version 1
 Title: Cleaning Services Contract
 Type: Service Agreement
 Description: The contract is for cleaning services between Jane Doe and Sparkling Cleaners LLC, outlining terms and obligations for $100 per cleaning with weekly payments.
-
-Title: [[contract_title]]
-Type: [[contract_type]]
-Description: [[description]]
-
+</ls_contract_description>
 
 <ls_contract_date>
 Effective Dates:
@@ -31,9 +25,7 @@ Effective Dates:
 ====================================================================
 <ls_input>
 {"jobpayload":{"jobid":134117,"jobtypecode":352,"jobtypecodeversion":1,"jobflags":{},"jobprofile":{"datatoprocess":{"logpath":"01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/log","rulepath":null,"txtfiles":null,"errorpath":"01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/error","htmlfiles":null,"shorttext":null,"inputfiles":["01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/input/contracts/Cleaning-Services-Contract.pdf"],"sourcefile":null,"accountpath":"/opt/omniscien/account/","logfilepath":"/opt/omniscien/account/01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/log/134117.log","outputfiles":null,"sourcefiles":null,"uploadfiles":2,"workingpath":"01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/work","documenttype":null,"htmlfilepath":null,"metadatapath":"01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/metadatapath","textfilepath":null,"candidatefile":null,"inputfilepath":"/opt/omniscien/account/01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/input/contracts/Cleaning-Services-Contract.pdf","referencefile":null,"candidatefiles":null,"filesonstorage":null,"outputfilepath":null,"referencefiles":null},"outputoptions":{"datafiles":{"pdf":0,"xml":0,"docx":1}},"processingoptions":{"debug":{"logdetail":0,"emaillogto":"","logjobsteps":1},"flowid":551,"userid":96,"flowguid":"0f445747-9b1b-4d7f-9218-195b4d7cf2a2","flowname":"Demo Contract Summary","accountid":1001,"batchname":null,"projectid":183,"variables":{"chkOutputMD":{"type":"boolean","value":0},"chkOutputPDF":{"type":"boolean","value":1},"chkOutputXML":{"type":"boolean","value":0},"chkOutputHTML":{"type":"boolean","value":0},"chkOutputJSON":{"type":"boolean","value":1},"chkOutputPlainText":{"type":"boolean","val...
-
-[[input]]
-
+</ls_input>
 
 ====================================================================
 3. OUT OF INDUSTRY NORMS
@@ -43,9 +35,7 @@ MD: - The contract commencement and termination dates are the same, effectively 
 - The Time is of the Essence clause may imply a stricter timing requirement than typical for cleaning services. This is out of the industry norm because cleaning services usually have more flexible timing requirements.
 - The Alcohol and Drugs clause is unusually strict as it terminates the agreement immediately upon the presence or possession of alcohol or drugs without requiring the individual to be under the influence or that it impacts their work. This is out of the industry norm because typically such clauses require impairment or impact on work performance.
 - The date format ('5th of September, 2024') used in the signature blocks is unconventional. This is out of the industry norm because the typical numerical date format (e.g., 09/05/2024) is more commonly used.
-
-[[out_of_industry_point]]
-
+</ls_out_of_industry_norm>
 
 ====================================================================
 4. CONTRACT PARTIES
@@ -56,13 +46,7 @@ Party Role: [[party_role]]
 Party: [[party_name]] (Short name: [[party_short_name]])
 Address: [[party_address]]
 </ls_row>
-
-<ls_row>
-Party Role: [[party_role]]
-Party: [[party_name]] (Short name: [[party_short_name]])
-Address: [[party_address]]
-</ls_row>
-
+</ls_contract_parties>
 
 ====================================================================
 5. PAYMENT DETAILS
@@ -73,13 +57,7 @@ Payment Schedule: Weekly
 Payment Method: Bank Transfer
 
 Late Payment Terms: Failure to return property may result in a delay in any final payment. The defaulted Party shall reimburse the non-defaulting Party or Parties for all costs and expenses reasonably incurred by the non-defaulting Party or Parties in connection with the default, including without limitation, attorney’s fees. Additionally, the contract outlines reimbursement for costs and expenses in the event of default as per Section XV.
-
-Payment Amount: [[payment_amount]]
-Payment Schedule: [[payment_schedule]]
-Payment Method: [[payment_method]]
-
-Late Payment Terms: [[late_payment]]
-
+</ls_contract_payment>
 
 ====================================================================
 6. OBLIGATIONS OF THE PARTIES
@@ -88,11 +66,7 @@ Late Payment Terms: [[late_payment]]
 <ls_row>
 [[party_table]]
 </ls_row>
-
-<ls_row>
-[[party_table]]
-</ls_row>
-
+</ls_contract_obligations>
 
 ====================================================================
 7. LEGAL TERMS AND CONDITIONS
@@ -118,28 +92,7 @@ This Agreement shall be governed by and shall be consfalsed in accordance with t
 
 Other Terms:
 The Cleaner must correct any defective or incomplete work within a reasonable time if notified by the Client. The Cleaner must return all property provided by the Client upon termination. Time is of the essence in performing duties. The Agreement shall be binding upon and inure to the benefit of heirs, personal representatives, successors, and assigns of the Parties. The presence of alcohol and drugs is prohibited while performing duties. Any waiver of a provision must be executed in writing. In the event of default, the defaulted Party shall reimburse the non-defaulting Party for costs and expenses, including attorney's fees. The prevailing Party in a suit or action shall be reimbursed by the other Party for costs and expenses, including reasonable attorney's fees. The Agreement constitutes the entire agreement between the Parties and supersedes all prior agreements. No supplement, modification, or amendment of this Agreement shall be binding unless executed in writing by all Parties. The Parties acknowledge executing this Agreement voluntarily and without duress or undue influence, have read and understood the terms, and have sought legal advice if desired. The Agreement also includes a severability clause, where if any term is held invalid, the remainder of the provisions shall remain in full force and effect.
-
-Confidentiality:
-[[confidentiality]]
-
-Intellectual Property:
-[[intellectual_property]]
-
-Warranties:
-[[warranties]]
-
-Liabilities:
-[[liabilities]]
-
-Indemnities:
-[[indemnities]]
-
-Governing Law:
-[[governing_law]]
-
-Other Terms:
-[[other_terms]]
-
+</ls_contract_legal>
 
 ====================================================================
 8. CONTRACT META INFORMATION
@@ -148,11 +101,7 @@ Other Terms:
 Summary Description: The contract is for cleaning services between Jane Doe and Sparkling Cleaners LLC, outlining terms and obligations for $100 per cleaning with weekly payments.
 Contract Type: Service Agreement
 Contract Title: Cleaning Services Contract
-
-Summary Description: [[description]]
-Contract Type: [[contract_type]]
-Contract Title: [[contract_title]]
-
+</ls_contract_description>
 
 ====================================================================
 9. SIGNATURE DETAILS
@@ -161,148 +110,4 @@ Signed on: 05 Sep 2024
 Contract Duration: 1 day
 Termination Clause: Breach or termination of Agreement
 
-
-Effective Dates:
-- Commencement Date: [[contract_start_date]]
-- End Date: [[contract_end_date]]
-- Signed Date: [[contract_signed_date]]
-- Duration: [[contract_duration]]
-- Term / Validity: [[contract_term]]
-- Termination Condition: [[contract_termination]]
-
-====================================================================
-2. INPUT DETAILS
-====================================================================
-<ls_input>
-{"jobpayload":{"jobid":134117,"jobtypecode":352,"jobtypecodeversion":1,"jobflags":{},"jobprofile":{"datatoprocess":{"logpath":"01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/log","rulepath":null,"txtfiles":null,"errorpath":"01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/error","htmlfiles":null,"shorttext":null,"inputfiles":["01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/input/contracts/Cleaning-Services-Contract.pdf"],"sourcefile":null,"accountpath":"/opt/omniscien/account/","logfilepath":"/opt/omniscien/account/01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/log/134117.log","outputfiles":null,"sourcefiles":null,"uploadfiles":2,"workingpath":"01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/work","documenttype":null,"htmlfilepath":null,"metadatapath":"01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/metadatapath","textfilepath":null,"candidatefile":null,"inputfilepath":"/opt/omniscien/account/01001/organization/00006/project/183/user/96/task/e2c9826d-b3c8-4579-bc43-9435cf4f9c4f/files/input/contracts/Cleaning-Services-Contract.pdf","referencefile":null,"candidatefiles":null,"filesonstorage":null,"outputfilepath":null,"referencefiles":null},"outputoptions":{"datafiles":{"pdf":0,"xml":0,"docx":1}},"processingoptions":{"debug":{"logdetail":0,"emaillogto":"","logjobsteps":1},"flowid":551,"userid":96,"flowguid":"0f445747-9b1b-4d7f-9218-195b4d7cf2a2","flowname":"Demo Contract Summary","accountid":1001,"batchname":null,"projectid":183,"variables":{"chkOutputMD":{"type":"boolean","value":0},"chkOutputPDF":{"type":"boolean","value":1},"chkOutputXML":{"type":"boolean","value":0},"chkOutputHTML":{"type":"boolean","value":0},"chkOutputJSON":{"type":"boolean","value":1},"chkOutputPlainText":{"type":"boolean","val...
-
-[[input]]
-
-
-====================================================================
-3. OUT OF INDUSTRY NORMS
-====================================================================
-<ls_out_of_industry_norm>
-MD: - The contract commencement and termination dates are the same, effectively making it a zero-duration contract. This is out of the industry norm because typically contracts have a specified duration.
-- The Time is of the Essence clause may imply a stricter timing requirement than typical for cleaning services. This is out of the industry norm because cleaning services usually have more flexible timing requirements.
-- The Alcohol and Drugs clause is unusually strict as it terminates the agreement immediately upon the presence or possession of alcohol or drugs without requiring the individual to be under the influence or that it impacts their work. This is out of the industry norm because typically such clauses require impairment or impact on work performance.
-- The date format ('5th of September, 2024') used in the signature blocks is unconventional. This is out of the industry norm because the typical numerical date format (e.g., 09/05/2024) is more commonly used.
-
-[[out_of_industry_point]]
-
-
-====================================================================
-4. CONTRACT PARTIES
-====================================================================
-<ls_contract_parties>
-<ls_row>
-Party Role: [[party_role]]
-Party: [[party_name]] (Short name: [[party_short_name]])
-Address: [[party_address]]
-</ls_row>
-
-<ls_row>
-Party Role: [[party_role]]
-Party: [[party_name]] (Short name: [[party_short_name]])
-Address: [[party_address]]
-</ls_row>
-
-
-====================================================================
-5. PAYMENT DETAILS
-====================================================================
-<ls_contract_payment>
-Payment Amount: $100 Per Cleaning
-Payment Schedule: Weekly
-Payment Method: Bank Transfer
-
-Late Payment Terms: Failure to return property may result in a delay in any final payment. The defaulted Party shall reimburse the non-defaulting Party or Parties for all costs and expenses reasonably incurred by the non-defaulting Party or Parties in connection with the default, including without limitation, attorney’s fees. Additionally, the contract outlines reimbursement for costs and expenses in the event of default as per Section XV.
-
-Payment Amount: [[payment_amount]]
-Payment Schedule: [[payment_schedule]]
-Payment Method: [[payment_method]]
-
-Late Payment Terms: [[late_payment]]
-
-
-====================================================================
-6. OBLIGATIONS OF THE PARTIES
-====================================================================
-<ls_contract_obligations>
-<ls_row>
-[[party_table]]
-</ls_row>
-
-<ls_row>
-[[party_table]]
-</ls_row>
-
-
-====================================================================
-7. LEGAL TERMS AND CONDITIONS
-====================================================================
-<ls_contract_legal>
-Confidentiality:
-The Cleaner agrees not to disclose the Client's Confidential Information, including financial and accounting records, client lists, and other business data, except with the Client's prior written consent or as required to advance the Client's business. The Cleaner must return all documents containing Confidential Information to the Client upon termination or request. The Client is entitled to an injunction if the Cleaner breaches the confidentiality agreement, as monetary damages would be an inadequate remedy.
-
-Intellectual Property:
-Not mentioned in Contract.
-
-Warranties:
-Not mentioned in Contract.
-
-Liabilities:
-The Client and Cleaner shall be liable for their respective obligations under this Agreement. The Cleaner agrees to indemnify and hold harmless the Client from any loss or damage resulting from a violation of the independent contractor status provision. The Cleaner shall be solely responsible and liable for any penalties, fines, or fees incurred related to safety and OSHA regulations. The Cleaner is also responsible for all withholdings and taxes.
-
-Indemnities:
-The Cleaner shall indemnify and hold harmless the Client from any loss or damage resulting from a violation of the independent contractor status provision. In the event of default, the defaulted Party shall reimburse the non-defaulting Party for all costs and expenses reasonably incurred, including attorney's fees.
-
-Governing Law:
-This Agreement shall be governed by and shall be consfalsed in accordance with the laws in the State of Illinois.
-
-Other Terms:
-The Cleaner must correct any defective or incomplete work within a reasonable time if notified by the Client. The Cleaner must return all property provided by the Client upon termination. Time is of the essence in performing duties. The Agreement shall be binding upon and inure to the benefit of heirs, personal representatives, successors, and assigns of the Parties. The presence of alcohol and drugs is prohibited while performing duties. Any waiver of a provision must be executed in writing. In the event of default, the defaulted Party shall reimburse the non-defaulting Party for costs and expenses, including attorney's fees. The prevailing Party in a suit or action shall be reimbursed by the other Party for costs and expenses, including reasonable attorney's fees. The Agreement constitutes the entire agreement between the Parties and supersedes all prior agreements. No supplement, modification, or amendment of this Agreement shall be binding unless executed in writing by all Parties. The Parties acknowledge executing this Agreement voluntarily and without duress or undue influence, have read and understood the terms, and have sought legal advice if desired. The Agreement also includes a severability clause, where if any term is held invalid, the remainder of the provisions shall remain in full force and effect.
-
-Confidentiality:
-[[confidentiality]]
-
-Intellectual Property:
-[[intellectual_property]]
-
-Warranties:
-[[warranties]]
-
-Liabilities:
-[[liabilities]]
-
-Indemnities:
-[[indemnities]]
-
-Governing Law:
-[[governing_law]]
-
-Other Terms:
-[[other_terms]]
-
-
-====================================================================
-8. CONTRACT META INFORMATION
-====================================================================
-<ls_contract_description>
-Summary Description: The contract is for cleaning services between Jane Doe and Sparkling Cleaners LLC, outlining terms and obligations for $100 per cleaning with weekly payments.
-Contract Type: Service Agreement
-Contract Title: Cleaning Services Contract
-
-Summary Description: [[description]]
-Contract Type: [[contract_type]]
-Contract Title: [[contract_title]]
-
-
-====================================================================
-9. SIGNATURE DETAILS
-====================================================================
-Signed on: [[contract_signed_date]]
-Contract Duration: [[contract_duration]]
-Termination Clause: [[contract_termination]]
-
-
+</ls_contract_date>

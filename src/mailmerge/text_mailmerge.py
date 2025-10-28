@@ -97,7 +97,7 @@ class TextMailMerge(BaseMailMerge):
         # Check if array keys exist to replace rows
         if self.__is_zone_array(zone):
             print(f"Processing list replacement for zone: {zone.zone_name}")
-            # self.__list_replace(zone)
+            self.__list_replace(zone)
 
         # # Finally, remove the start and end tags from the template
         # self._temp_buffer = self.__remove_start_end_tags(
