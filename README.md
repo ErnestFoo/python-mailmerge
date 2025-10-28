@@ -24,8 +24,7 @@ This repository provides a reusable, regex-driven mailmerge engine intended for 
 
 ## Supported formats
 - .txt (plain text)
-- .md (Markdown)
-- .xml (text-based XML)
+
 Note: Binary formats or templates requiring non-text parsing are outside the current scope.
 
 ## Quick start
@@ -60,6 +59,216 @@ mailmerge.perform_merge() # Core merge entry point
 
 mailmerge.save_output_from_buffer("output.md") #Save the output from the mailmerge class
 ```
+
+## Mailmerge concepts
+
+---
+### Template Format
+
+MailMerge templates are plain text files that define **zones** — sections of text where replacements can occur.  
+Each zone is enclosed in start and end delimiters using the following format:
+
+```code
+<ls_{zonename}>
+...text content or placeholders...
+</ls_{zonename}>
+```
+
+### Zone Declarations
+
+A **zone** is declared using the `<ls_zonename>` and `</ls_zonename>` tags.
+
+Example:
+
+```
+<ls_body>
+This is some text inside the "body" zone.
+</ls_body>
+```
+
+Everything inside these tags is considered part of that zone and can include **placeholders (keys)** that will be replaced during processing.
+
+---
+
+### 🔹 Placeholders (Keys)
+Keys are placeholders enclosed in double square brackets:  
+```
+[[KeyName]]
+```
+
+When a key appears **inside a zone**, its value will only be replaced if it is declared under that zone’s `zonekeys` in the Zone JSON file.
+
+Example:
+```
+<ls_body>
+Dear [[RecipientName]],
+
+Your order #[[OrderID]] has been shipped.
+</ls_body>
+
+```
+
+In this case, both `RecipientName` and `OrderID` must be listed inside the `zonekeys` for the `"body"` zone.
+
+---
+
+### Global Keys
+
+Keys that appear **throughout the document** (for example, in headers, greetings, or signatures) must be defined under a special `"global"` section in the Zone JSON file. (See Zone JSON format section). If a global key shadows a zoned key, the key within the zone will be replaced by its global value.
+
+
+Example:
+
+```
+Company: [[CompanyName]]
+
+<ls_message>
+Hello [[Name]], your report is ready.
+</ls_message>
+
+Sincerely,
+[[SenderName]]
+````
+
+
+---
+
+
+### Marking Zones for Deletion
+
+If a zone is explicitly **marked for deletion** in the input JSON, the entire block of text enclosed by that zone’s tags will be **removed** from the output.
+
+Example:
+
+**Template:**
+
+```
+Thank you for your interest.
+
+<ls_optional_note>
+Please complete your profile to receive updates.
+</ls_optional_note>
+
+Best regards,
+[[Sender]]
+```
+
+**Zone JSON:**
+
+```json
+{
+  "zones": [
+    {
+      "zonename": "optional_note",
+      ...
+      "zonedelete": true
+    }
+  ]
+}
+```
+
+**Resulting Output:**
+
+```
+Thank you for your interest.
+
+Best regards,
+Customer Service
+```
+---
+### Lists / Zone Arrays
+
+A Zone Array represents a repeating list of data that belongs to a specific zone.
+When a zone includes a "zonearray" in the Zone JSON, the entire block of text inside that zone will be duplicated once per entry in the array — with all placeholder keys replaced by each item’s values.
+
+This allows you to automatically generate repeating sections (such as lists of items, skills, experiences, etc.) within a single zone.
+This only applies to sections within the zone, delimited by the <ls_row> tag.
+
+Example:
+```
+Template:
+
+<ls_skills>
+  <ls_row>
+  • [[SkillName]] — [[SkillLevel]]
+  </ls_row>
+</ls_skills>
+```
+
+Zone JSON:
+```
+{
+  "zones": [
+    {
+      "zonename": "skills",
+      "zonearray": [
+        { "SkillName": "Python", "SkillLevel": "Advanced" },
+        { "SkillName": "C#", "SkillLevel": "Intermediate" },
+        { "SkillName": "React", "SkillLevel": "Advanced" }
+      ]
+    }
+  ]
+}
+```
+
+Resulting Output:
+```
+• Python — Advanced
+• C# — Intermediate
+• React — Advanced
+```
+
+If both zonearray and zonekeys are present, the system will prioritize zonearray for repetition but still allow single keys defined in zonekeys to appear within the same zone (for example, as section titles or summaries).
+
+---
+
+### Summary of Template Rules
+
+| Element             | Syntax                     | Description                                              |
+| ------------------- | -------------------------- | -------------------------------------------------------- |
+| **Zone Start Tag**  | `<ls_zonename>`            | Marks the beginning of a zone                            |
+| **Zone End Tag**    | `</ls_zonename>`           | Marks the end of a zone                                  |
+| **Placeholder Key** | `[[Key]]`                  | Replaced with its corresponding value in the zone’s data |
+| **Global Key**      | `[[Key]]` (outside zones)  | Replaced if defined under `globals` in JSON              |
+| **Deleted Zone**    | Zone with `"delete": true` | Entire zone is removed from final output                 |
+
+---
+
+This format ensures templates are **modular, readable, and easily customizable**, allowing you to define reusable mail templates with clear data binding.
+
+## Zones JSON format 
+
+The Zones JSON file tells MailMerge **what zones exist in the template**, **what data to fill in**, and **whether to keep or remove** each section.
+
+Each zone in the JSON matches a `<ls_zonename>...</ls_zonename>` block in your template.
+
+---
+
+### 🧱 Example
+
+```json
+{
+  "zones": [
+    {
+      "zonename": "global",
+      "zonekeys": {
+        "section": "terms",
+        "priority": 2
+      },
+      "zonearray": [],
+      "zonedelete": false
+    },
+    {
+      "zonename": "signatures",
+      "zonekeys": {
+        "section": "footer",
+        "requires_date": true
+      },
+      "zonearray": [],
+      "zonedelete": true
+    }
+  ]
+}
 
 ## Project structure
 The current project tree (excluding metadata):

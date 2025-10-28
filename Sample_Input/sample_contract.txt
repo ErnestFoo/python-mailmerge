@@ -38,9 +38,11 @@ Effective Dates:
 4. CONTRACT PARTIES
 ====================================================================
 <ls_contract_parties>
+<ls_row>
 Party Role: [[party_role]]
 Party: [[party_name]] (Short name: [[party_short_name]])
 Address: [[party_address]]
+</ls_row>
 </ls_contract_parties>
 
 ====================================================================
@@ -58,7 +60,9 @@ Late Payment Terms: [[late_payment]]
 6. OBLIGATIONS OF THE PARTIES
 ====================================================================
 <ls_contract_obligations>
+<ls_row>
 [[party_table]]
+</ls_row>
 </ls_contract_obligations>
 
 ====================================================================
